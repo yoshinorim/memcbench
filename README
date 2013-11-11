@@ -1,0 +1,14 @@
+Simple multi-threaded memcached benchmarking script, primarily for testing InnoDB-memcached plugin
+
+How to build:
+* Install libmemcached
+* Install cmake
+* cmake .
+* make
+* make install
+
+Example usage:
+(Create table with integer primary key, then load data from pk 1 to 1000000)
+memcbench --host=mysqld_host --port=11211 --rows=1000000 --requests=10000000 --nclient=100 --key_suffix="@@memc1."
+
+
