@@ -8,6 +8,7 @@
 #include <sys/time.h>
 #include <memcached.h>
 #include <string.h>
+#include <unistd.h>
 #include "opt.h"
 
 unsigned long long timediff(struct timeval tv0, struct timeval tv1)
